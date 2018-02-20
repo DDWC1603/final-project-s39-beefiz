@@ -4,25 +4,55 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string.h>
+#include <windows.h>
 
 using namespace std;
 
 void help();
-void buatapa();
 void calculate(int& x,int& y);
 
-void help ()
+void calculate(int& x,int& y)
 {
-	cout<<"WELCOME TO OUR CUSTOMER SERVICE"<<endl;
-	cout<<"";	
-	
-	
-	
+	int price,money_in,balance;
+						price=x*y;	
+	 				    cout<<"Total Price : "<<price<<endl<<endl;
+	 				     
+	 				    cout<<"Please Enter Your Money :RM ";
+					    cin>> money_in;
+												 
+						balance = money_in - price;
+						 
+						 if (money_in>=price)
+						 {
+						 	cout<< "Your Balance : "<<balance<<endl<<endl;
+					      	cout<< "Thank You Please Come Again !!!"<<endl;
+							  	
+						 }
+						while(money_in<price)
+	 				    {
+	 				     	cout<<"Try again"<<endl;
+	 				     	
+						 	cout<<"Please Enter Your Money :RM ";
+					      cin>> money_in;
+												 
+						  balance = money_in - price;
+						 
+						 if (money_in>=price)
+						 {
+						 	cout<< "Your Balance :RM "<<balance<<endl<<endl;
+					      	cout<< "Thank You Please Come Again !!!"<<endl;
+							  	
+						 }	
+						}
 }
-void buatapa_1 ()
+class wtpe
+{
+public:
+	void buatapa_1 ()
 {
 	int bahasa,lesen,option,helping,TODO,gunweight,pricetag,q_gun,c_gun,price,money_in,balance,nyah;
 	
+	system("CLS");
 	cout<< "Owh This Is Your First Time... What Do You Want to Do?"<<endl<<endl;
 			   cout<< "1. Start a war ?" <<endl<<endl;
 			   cout<< "2. Defence Your Country?"<<endl<<endl;
@@ -31,10 +61,6 @@ void buatapa_1 ()
 			   
 			   cin>> TODO;
 			   
-			   cout<<"nk bantuan \n 1.yes \n 2. no"<<endl;
-			   cin>>helping;
-			   if(helping>=2)
-			   {
 			   if (TODO == 1)
 			   {
 			   	cout<< "Owh You want to start a war.haha nice"<<endl;
@@ -60,11 +86,11 @@ void buatapa_1 ()
 		             	system ("CLS");
 				   	  	
 				   	    cout<<" Here For Heavy & Expansive : "<<endl<<endl;
-                        cout<<" SHOTGUN - 1. LEONE YG1263 AUTO SHOTGUN (RM10) "<<endl;       
-                        cout<<" RIFLES  - 2.  CLARION 5.56(RM10) \n -3. WDHMIDT SCOUT(RM12)  \n - 4. M4A1(RM15)  \n - 5. BULLPUP(RM16)  \n - 6. KRIEG 550 COMMANDO(RM20) \n - 7. MAGNUM SNIPER RIFLE(RM25) "<<endl;
-                        cout<<" 8. MACHINE GUN - M249(RM30)"<<endl; 
+                        cout<<" SHOTGUN : \n1.LEONE YG1263 AUTO SHOTGUN (RM3000) "<<endl;       
+                        cout<<" \n RIFLES  : \n2.CLARION 5.56(RM2250) \n3.WDHMIDT SCOUT(RM2750)  \n4.M4A1(RM3100)  \n5.BULLPUP(RM3500)  \n6.KRIEG 550 COMMANDO(RM4200) \n7.MAGNUM SNIPER RIFLE(RM4750) "<<endl;
+                        cout<<"\n MACHINE GUN :\n8.M249(RM5750)"<<endl; 
 						
-						cout<< "Choose What Gun Do You Want : "<<endl;
+						cout<< "\nChoose What Gun Do You Want : "<<endl;
 						cin>> c_gun;
 						
 						cout<< "How Many Do You Want It ? "<<endl<<endl;
@@ -72,50 +98,50 @@ void buatapa_1 ()
 						
 						if (c_gun == 1)
 					    {
-					      c_gun = 10;
+					      c_gun = 3000;
 					      calculate(c_gun,q_gun);
 						  
 						}
 						
 						else if (c_gun == 2)
 						{
-							c_gun = 10;
+							c_gun = 2250;
 						    calculate(c_gun,q_gun);
 						}
 						          
 		   		   	    else if (c_gun == 3)
 						{
-							c_gun = 12;
+							c_gun = 2750;
 						  	calculate(c_gun,q_gun);
 						}
 		   		   	    
 				   	  	else if (c_gun == 4)
 						{
-							c_gun = 15;
+							c_gun = 3100;
 						  	calculate(c_gun,q_gun);
 						}
 						
 						else if (c_gun == 5)
 						{
-							c_gun = 16;
+							c_gun = 3500;
 						  	calculate(c_gun,q_gun);	
 						}
 						
 						else if (c_gun == 6)
 						{
-							c_gun = 20;
+							c_gun = 4200;
 						  	calculate(c_gun,q_gun);	
 						}
 						
 						else if (c_gun == 7)
 						{
-							c_gun = 25;
+							c_gun = 4750;
 						  	calculate(c_gun,q_gun);
 						}
 						
 						else if (c_gun == 8)
 						{
-							c_gun = 30;
+							c_gun = 5750;
 						  	calculate(c_gun,q_gun);
 						}
 				      
@@ -132,10 +158,10 @@ void buatapa_1 ()
 				   	  	system ("CLS");
 				   	  	
 				   	  	cout<<" Here For Heavy & Cheep : "<<endl<<endl;
-				   	  	cout<< "Shotguns: 1. LEONE 12 GAUGE SUPER"<<endl<<endl;
-	                    cout<< "RIFLES   2. IDF DEFENDER \n 3. CV-47 \n 4. KRIEG 552 \n 5. MAGNUM SNIPER RIFLE \n 6.D3/AU-1"<<endl;
+				   	  	cout<< " SHOTGUNS : \n1.LEONE 12 GAUGE SUPER(RM1700)"<<endl<<endl;
+	                    cout<< " RIFLES : \n2.IDF DEFENDER(RM2000) \n3.CV-47(RM2500) \n4.KRIEG 552(RM3500) \n5.MAGNUM SNIPER RIFLE(RM4750) \n6.D3/AU-1(RM5000)"<<endl;
                  
-				   	  	cout<< "Choose What Gun Do You Want : "<<endl;
+				   	  	cout<< "\nChoose What Gun Do You Want : "<<endl;
 						cin>> c_gun;
 						
 						cout<< "How Many Do You Want It ? "<<endl<<endl;
@@ -143,38 +169,38 @@ void buatapa_1 ()
 						
 						if (c_gun == 1)
 					    {
-					      c_gun = 10;
+					      c_gun = 1700;
 						  calculate(c_gun,q_gun);
 						}
 						
 						else if (c_gun == 2)
 						
 						{
-							c_gun = 10;
+							c_gun = 2000;
 						  	calculate(c_gun,q_gun);
 						}
 						          
 		   		   	    else if (c_gun == 3)
 						{
-							c_gun = 12;
+							c_gun = 2500;
 						  	calculate(c_gun,q_gun);
 						}
 		   		   	    
 				   	  	else if (c_gun == 4)
 						{
-							c_gun = 15;
+							c_gun = 3500;
 						  	calculate(c_gun,q_gun);
 						}
 						
 						else if (c_gun == 5)
 						{
-							c_gun = 16;
+							c_gun = 4750;
 						  	calculate(c_gun,q_gun);
 						}
 						
 						else if (c_gun == 6)
 						{
-							c_gun = 20;
+							c_gun = 5000;
 						  	calculate(c_gun,q_gun);	
 						}
 					}
@@ -199,8 +225,8 @@ void buatapa_1 ()
 		             	system ("CLS");
 				   	  	
 				   	    cout<<" Here For Lightweight & Expansive : "<<endl<<endl;
-                        cout<<" PISTOL: 1. DESERT EAGLE \n 2. 40 DUAL ELITES "<<endl;       
-                        cout<<" SMG : 3.KM UMP45 \n 4. ES C90 "<<endl;
+                        cout<<" PISTOL: \n1.DESERT EAGLE(RM650) \n2.40 DUAL ELITES(RM800) "<<endl;       
+                        cout<<" \nSMG : \n3.KM UMP45(RM1700) \n4.ES C90(RM2350) "<<endl;
                                    
 		   		   	    
 				   	  	cout<< "Choose What Gun Do You Want : "<<endl;
@@ -212,28 +238,28 @@ void buatapa_1 ()
 						if (c_gun == 1)
 					    
 					    {
-					      	c_gun = 10;
+					      	c_gun = 650;
 						 	calculate(c_gun,q_gun);
 						}
 						
 						else if (c_gun == 2)
 						
 						{
-							c_gun = 10;
+							c_gun = 800;
 						  	calculate(c_gun,q_gun);
 						}
 						          
 		   		   	    else if (c_gun == 3)
 						
 						{
-							c_gun = 12;
+							c_gun =1700;
 						  	calculate(c_gun,q_gun);
 						}
 		   		   	    
 				   	  	else if (c_gun == 4)
 						
 						{
-							c_gun = 15;
+							c_gun = 2350;
 						  	calculate(c_gun,q_gun);
 						}
 						
@@ -251,11 +277,11 @@ void buatapa_1 ()
 				   	  	system ("CLS");
 				   	  	
 				   	  	cout<<" Here For LightWeight & cheep : "<<endl<<endl;
-				   	  	cout<< "Pistol: 1. 9x19MM SIDEARM \n 2. KM .45 TACTICAL \n 3. 228 COMPACT "<<endl<<endl;
-	                    cout<< "SMG :  4. INGRAM MAC-10 \n 5.KM SUB-MACHINE GUN "<<endl;
+				   	  	cout<< "PISTOL: \n1.9x19MM SIDEARM(RM400) \n2.KM .45 TACTICAL(RM500) \n3.228 COMPACT(RM600) "<<endl<<endl;
+	                    cout<< "SMG :  \n4.INGRAM MAC-10(RM1400) \n5.KM SUB-MACHINE GUN(RM1500) "<<endl;
 	                    
 	             
-	            		cout<< "Choose What Gun Do You Want : "<<endl;
+	            		cout<< "\nChoose What Gun Do You Want : "<<endl;
 						cin>> c_gun;
 						
 						cout<< "How Many Do You Want It ? "<<endl<<endl;
@@ -263,31 +289,31 @@ void buatapa_1 ()
 						
 						if (c_gun == 1)
 					    {
-					      c_gun = 10;
+					      c_gun = 400;
 						  calculate(c_gun,q_gun);
 						}
 						
 						else if (c_gun == 2)
 						{
-							c_gun = 10;
+							c_gun = 500;
 						  	calculate(c_gun,q_gun);
 						}
 						          
 		   		   	    else if (c_gun == 3)
 						{
-							c_gun = 12;
+							c_gun = 600;
 						  	calculate(c_gun,q_gun);
 						}
 		   		   	    
 				   	  	else if (c_gun == 4)
 						{
-							c_gun = 15;
+							c_gun = 1400;
 						  
 						}
 						
 						else if (c_gun == 5)
 						{
-							c_gun = 16;
+							c_gun = 1500;
 						  	calculate(c_gun,q_gun);	
 						}
 						
@@ -307,14 +333,14 @@ void buatapa_1 ()
 			   	
 			   	if (nyah == 1)
 			   	{
-			   		cout<< "Here The List Of Weapon That We recommend"<<endl;
-			   	    system ("pause");
 			   	    system ("CLS");
-			   	    cout<<" PISTOL: 1. DESERT EAGLE \n 2. 40 DUAL ELITES "<<endl;
-			   	    cout<<" SHOTGUN - 3. LEONE YG1263 AUTO SHOTGUN (RM10) "<<endl;       
-                    cout<<" RIFLES  - 4.  CLARION 5.56(RM10) \n -5. WDHMIDT SCOUT(RM12)  \n - 6. M4A1(RM15)  \n - 7. BULLPUP(RM16)  \n - 8. KRIEG 550 COMMANDO(RM20) \n - 9. MAGNUM SNIPER RIFLE(RM25) "<<endl;
+			   		cout<< "Here The List Of Weapon That We recommend"<<endl<<endl;
+			   	    
+			   	    cout<<" PISTOL: \n1. DESERT EAGLE(RM650) \n2.40 DUAL ELITES(RM800) "<<endl<<endl;
+			   	    cout<<" SHOTGUN : \n3.LEONE YG1263 AUTO SHOTGUN (RM3000) "<<endl<<endl;       
+                    cout<<" RIFLES:  \n4.CLARION 5.56(RM2250) \n5.WDHMIDT SCOUT(RM2750)  \n6.M4A1(RM3100)  \n7.BULLPUP(RM3500)  \n8.KRIEG 550 COMMANDO(RM4200) \n9.MAGNUM SNIPER RIFLE(RM4750) "<<endl;
                     
-                    cout<< "Choose What Gun Do You Want : "<<endl;
+                    cout<< "\nChoose What Gun Do You Want : "<<endl;
 					cin>> c_gun;
 						
 					cout<< "How Many Do You Want It ? "<<endl<<endl;
@@ -323,64 +349,59 @@ void buatapa_1 ()
 					
 					    if (c_gun == 1)
 					    {
-					    	c_gun = 10;
+					    	c_gun = 650;
 					      calculate(c_gun,q_gun);
 						}
 						
 						else if (c_gun == 2)
 						{
-							c_gun = 10;
+							c_gun = 800;
 					      calculate(c_gun,q_gun);
 						}
 					    
 						else if (c_gun == 3)
 					    {
-					      c_gun = 10;
+					      c_gun = 3000;
 					      calculate(c_gun,q_gun);
 						  
 						}
 						
 						else if (c_gun == 4)
 						{
-							c_gun = 10;
+							c_gun = 2250;
 						    calculate(c_gun,q_gun);
 						}
 						          
 		   		   	    else if (c_gun == 5)
 						{
-							c_gun = 12;
+							c_gun = 2750;
 						  	calculate(c_gun,q_gun);
 						}
 		   		   	    
 				   	  	else if (c_gun == 6)
 						{
-							c_gun = 15;
+							c_gun = 3100;
 						  	calculate(c_gun,q_gun);
 						}
 						
 						else if (c_gun == 7)
 						{
-							c_gun = 16;
+							c_gun = 3500;
 						  	calculate(c_gun,q_gun);	
 						}
 						
 						else if (c_gun == 8)
 						{
-							c_gun = 20;
+							c_gun = 4200;
 						  	calculate(c_gun,q_gun);	
 						}
 						
 						else if (c_gun == 9)
 						{
-							c_gun = 25;
+							c_gun = 4750;
 						  	calculate(c_gun,q_gun);
 						}
-						
-						else if (c_gun == 10)
-						{
-							c_gun = 30;
-						  	calculate(c_gun,q_gun);
-						}
+				
 			   	    
 				}
 				
@@ -390,9 +411,9 @@ void buatapa_1 ()
 			   	    system ("pause");
 			   	    system ("CLS");	
 			   	    
-			   	    cout<<" 1. KEVLAR \n2.KEVLAR + HELMET \n3.FLASHBANG \n4.HE GRENADE \n5.SMOKE GRENADE \n6.DEFUSAL KIT \n7.NIGHTVISION \n8.TACTICAL SHIELD "<<endl;
+			   	    cout<<"1.KEVLAR(RM650) \n\n2.KEVLAR + HELMET(RM1000) \n\n3.FLASHBANG(RM200) \n\n4.HE GRENADE(RM300) \n\n5.SMOKE GRENADE(RM300) \n\n6.DEFUSAL KIT(RM200) \n\n7.NIGHTVISION \n\n8.TACTICAL SHIELD(RM2200) "<<endl;
 			   	    
-			   	    cout<< "Choose What Gun Do You Want : "<<endl;
+			   	    cout<< "\nChoose What Gun Do You Want : "<<endl;
 					cin>> c_gun;
 						
 					cout<< "How Many Do You Want It ? "<<endl<<endl;
@@ -401,50 +422,50 @@ void buatapa_1 ()
 					
 					    if (c_gun == 1)
 					    {
-					    	c_gun = 10;
+					    	c_gun = 650;
 					      calculate(c_gun,q_gun);
 						}
 						
 						else if (c_gun == 2)
 						{
-							c_gun = 10;
+							c_gun = 1000;
 					      calculate(c_gun,q_gun);
 						}
 					    
 						else if (c_gun == 3)
 					    {
-					      c_gun = 10;
+					      c_gun = 200;
 					      calculate(c_gun,q_gun);
 						  
 						}
 						
 						else if (c_gun == 4)
 						{
-							c_gun = 10;
+							c_gun = 300;
 						    calculate(c_gun,q_gun);
 						}
 						          
 		   		   	    else if (c_gun == 5)
 						{
-							c_gun = 12;
+							c_gun = 300;
 						  	calculate(c_gun,q_gun);
 						}
 		   		   	    
 				   	  	else if (c_gun == 6)
 						{
-							c_gun = 15;
+							c_gun = 200;
 						  	calculate(c_gun,q_gun);
 						}
 						
 						else if (c_gun == 7)
 						{
-							c_gun = 16;
+							c_gun = 1250;
 						  	calculate(c_gun,q_gun);	
 						}
 						
 						else if (c_gun == 8)
 						{
-							c_gun = 20;
+							c_gun = 2200;
 						  	calculate(c_gun,q_gun);	
 						}
 			   	    
@@ -460,9 +481,9 @@ void buatapa_1 ()
 			
 		        system ("CLS");
 			   	
-			   	cout<<" 1. MACHINE GUN - M249(RM30)"<<endl; 
+			   	cout<<" MACHINE GUN  \n1.M249(RM5750)"<<endl; 
 			   	
-			   	cout<< "Choose What Gun Do You Want : "<<endl;
+			   	cout<< "\nChoose What Gun Do You Want : "<<endl;
 					cin>> c_gun;
 						
 					cout<< "How Many Do You Want It ? "<<endl<<endl;
@@ -471,7 +492,7 @@ void buatapa_1 ()
 					
 					    if (c_gun == 1)
 					    {
-					    	c_gun = 10;
+					    	c_gun = 5750;
 					      calculate(c_gun,q_gun);
 						}
 						
@@ -487,9 +508,9 @@ void buatapa_1 ()
 			
 		        system ("CLS");
 			
-				   cout<< "1. KRIEG 550 COMMANDO(RM20) \n - 2. MAGNUM SNIPER RIFLE(RM25)"<<endl;
+				   cout<< "1.WDHMIDT SCOUT(RM2750) \n2.KRIEG 550 COMMANDO(RM4200) \n3.MAGNUM SNIPER RIFLE(RM4750) \n4.D3/AU-1(RM5000)"<<endl;
 				   
-				   cout<< "Choose What Gun Do You Want : "<<endl;
+				   cout<< "\nChoose What Gun Do You Want : "<<endl;
 					cin>> c_gun;
 						
 					cout<< "How Many Do You Want It ? "<<endl<<endl;
@@ -498,75 +519,309 @@ void buatapa_1 ()
 					
 					    if (c_gun == 1)
 					    {
-					    	c_gun = 10;
+					    	c_gun = 2750;
 					      calculate(c_gun,q_gun);
 						}
 						
 						else if (c_gun == 2)
+					    {
+					    	c_gun = 4200;
+					      calculate(c_gun,q_gun);
+						}
+						
+						else if (c_gun == 3)
 						{
-							c_gun = 10;
+							c_gun = 4750;
+					      calculate(c_gun,q_gun);
+						}
+						
+						else if (c_gun == 4)
+					    {
+					    	c_gun = 5000;
 					      calculate(c_gun,q_gun);
 						}
 			   	
 			   }
   
-				}
-				else if(helping==1)
-				{
-					help();
-				}
+				
 			}
 
 void buatapa_2 ()
-{
-	
+{                       system("CLS");
+                        int pilih,c_gun,q_gun;
+                        char pick;
+					while(true)
+					{
+						
+						
+						cout<<" What Do You Want? \n\n1.PISTOL \n2.SHOTGUNS \n3.SMG \n4.RIFLES \n5.SNIPER \n6.MACHINE GUN";
+                        cin>> pilih;
+                        
+						if (pilih == 1)
+						{system("CLS");
+							cout<<"PISTOL : "<<endl<<endl;
+	                        cout<< "1.9x19MM SIDEARM(RM400) \n2.KM .45 TACTICAL(RM500) \n3.228 COMPACT(RM600) \n4.DESERT EAGLE(RM650) \n5.40 DUAL ELITES(RM800) "<<endl<<endl;
+	                        
+	                        cout<<"Confirm? y/n"<<endl;
+	                        cin>>pick;
+	                        if(pick=='y')
+	                        {
+	                        cout<< "\nChoose What Gun Do You Want : "<<endl;
+							cin>> c_gun;
+						     
+							cout<< "How Many Do You Want It ? "<<endl<<endl;
+				    		cin>> q_gun;
+						
+					
+					    if (c_gun == 1)
+					    {
+					    	c_gun = 400;
+					      calculate(c_gun,q_gun);break;
+						}
+						
+						else if (c_gun == 2)
+						{
+							c_gun = 500;
+					      calculate(c_gun,q_gun);break;
+						}
+						
+					    
+						else if (c_gun == 3)
+					    {
+					      c_gun = 600;
+					      calculate(c_gun,q_gun);break;
+						  
+						}
+						
+						else if (c_gun == 4)
+						{
+							c_gun = 650;
+						    calculate(c_gun,q_gun);break;
+						}
+						          
+		   		   	    else if (c_gun == 5)
+						{
+							c_gun = 800;
+						  	calculate(c_gun,q_gun);break;
+						}
+						
+							}
+						else
+						{continue;}
+						
+						}
+						
+						else if(pilih ==2)
+						{system("CLS");
+							 cout<<"SHOTGUNS : "<<endl<<endl;
+	                         cout<< "1. LEONE 12 GAUGE SUPER(RM1700) \n2.LEONE YG1263 AUTO SHOTGUN (RM3000)"<<endl<<endl;
+	                    	
+							cout<<"Confirm? y/n"<<endl;
+	                        cin>>pick;
+	                        if(pick=='y')
+	                        {
+							cout<< "\nChoose What Gun Do You Want : "<<endl;
+							cin>> c_gun;
+						
+							cout<< "How Many Do You Want It ? "<<endl<<endl;
+				    		cin>> q_gun;
+						
+					
+					    if (c_gun == 1)
+					    {
+					    	c_gun = 1700;
+					      	calculate(c_gun,q_gun);break;
+						}
+						
+						else if (c_gun == 2)
+						{
+							c_gun = 3000;
+					      	calculate(c_gun,q_gun);break;
+						}
+					    
+					        }
+					        else
+					        {continue;}
+						}
+						
+						else if(pilih ==3)
+						{system("CLS");
+							 cout<<"SMG : "<<endl<<endl;
+	                         cout<< "1.INGRAM MAC-10 (RM1400) \n2.KM SUB-MACHINE GUN(RM1500) \n3.KM UMP45(RM1700) \n4.ES C90(RM2350) "<<endl;
+	                        
+							cout<<"Confirm? y/n"<<endl;
+	                        cin>>pick;
+	                        if(pick=='y')
+	                        {							
+							 cout<< "\nChoose What Gun Do You Want : "<<endl;
+					        cin>> c_gun;
+						
+				           	cout<< "How Many Do You Want It ? "<<endl<<endl;
+				            cin>> q_gun;
+						
+					
+					    if (c_gun == 1)
+					    {
+					    	c_gun = 1400;
+					      	calculate(c_gun,q_gun);break;
+						}
+						
+						else if (c_gun == 2)
+						{
+							c_gun = 1500;
+					      	calculate(c_gun,q_gun);break;
+						}
+					    
+						else if (c_gun == 3)
+					    {
+					      	c_gun = 1700;
+					      	calculate(c_gun,q_gun);break;
+						  
+						}
+						
+						else if (c_gun == 4)
+						{
+							c_gun = 2350;
+						    calculate(c_gun,q_gun);break;
+						}
+							}
+							else
+							{continue;}
+						}
+						
+						else if(pilih ==4)
+						{system("CLS");
+							 cout<<"RIFLES : "<<endl<<endl;
+                             cout<<"1.IDF DEFENDER(RM2000) \n2.CLARION 5.56(RM2250) \n3.CV-47(RM2500) \n4.M4A1(RM3100) \n4.BULLPUP(RM3500) \n5.KRIEG 552(RM3500)"<<endl<<endl;
+                            cout<<"Confirm? y/n"<<endl;
+	                        cin>>pick;
+	                        if(pick=='y')
+	                        {
+							cout<< "\nChoose What Gun Do You Want : "<<endl;
+				           	cin>> c_gun;
+						
+				         	cout<< "How Many Do You Want It ? "<<endl<<endl;
+				            cin>> q_gun;
+						
+					
+					    if (c_gun == 1)
+					    {
+					    	c_gun = 2000;
+					      	calculate(c_gun,q_gun);break;
+						}
+						
+						else if (c_gun == 2)
+						{
+							c_gun = 2250;
+					      	calculate(c_gun,q_gun);break;
+						}
+					    
+						else if (c_gun == 3)
+					    {
+					      	c_gun = 2500;
+					      	calculate(c_gun,q_gun);break;
+						  
+						}
+						
+						else if (c_gun == 4)
+						{
+							c_gun = 3100;
+						    calculate(c_gun,q_gun);break;
+						}
+						          
+		   		   	    else if (c_gun == 5)
+						{
+							c_gun = 3500;
+						  	calculate(c_gun,q_gun);break;
+						}
+							}
+							else
+							{continue;}
+						}
+						else if(pilih ==5)
+						{system("CLS");
+							cout<<"SNIPER : "<<endl<<endl;
+	                        cout<< "1.WDHMIDT SCOUT(RM2750) \n2.KRIEG 550 COMMANDO(RM4200) \n3.MAGNUM SNIPER RIFLE(RM4750) \n4.D3/AU-1(RM5000)"<<endl;
+	                        
+							cout<<"Confirm? y/n"<<endl;
+	                        cin>>pick;
+	                        if(pick=='y')
+	                        {
+							cout<< "\nChoose What Gun Do You Want : "<<endl;
+					        cin>> c_gun;
+						
+					        cout<< "How Many Do You Want It ? "<<endl<<endl;
+				            cin>> q_gun;
+						
+					
+					    if (c_gun == 1)
+					    {
+					    	c_gun = 2750;
+					      	calculate(c_gun,q_gun);break;
+						}
+						
+						else if (c_gun == 2)
+						{
+							c_gun = 4200;
+					      	calculate(c_gun,q_gun);break;
+						}
+					    
+						else if (c_gun == 3)
+					    {
+					      	c_gun = 4750;
+					      	calculate(c_gun,q_gun);break;
+						  
+						}
+						
+						else if (c_gun == 4)
+						{
+							c_gun = 5000;
+						    calculate(c_gun,q_gun);break;
+						}
+						          
+		   		   	    
+							}
+							else
+							{continue;}
+						}
+						else if(pilih ==6)
+						{system("CLS");
+							cout<<"MACHINE GUN : "<<endl<<endl;
+	                        cout<<"1.MACHINE GUN - M249(RM5750)"<<endl;
+	                        cout<<"Confirm? y/n"<<endl;
+	                        cin>>pick;
+	                        if(pick=='y')
+	                        {
+	                        cout<< "\nChoose What Gun Do You Want : "<<endl;
+					        cin>> c_gun;
+						
+				        	cout<< "How Many Do You Want It ? "<<endl<<endl;
+				            cin>> q_gun;
+						
+					    if (c_gun == 1)
+					    {
+					    	c_gun = 5750;
+					      	calculate(c_gun,q_gun);break;
+						}
+						
+							}
+							else
+							{continue;}
+						}
+					}
 }
 
 void buatapa_3 ()
 {
-	
-	                    cout<<" Here For Heavy & Expansive : "<<endl<<endl;
-                        cout<<" SHOTGUN - 1. LEONE YG1263 AUTO SHOTGUN (RM10) "<<endl;       
-                        cout<<" RIFLES  - 2.  CLARION 5.56(RM10) \n -3. WDHMIDT SCOUT(RM12)  \n - 4. M4A1(RM15)  \n - 5. BULLPUP(RM16)  \n - 6. KRIEG 550 COMMANDO(RM20) \n - 7. MAGNUM SNIPER RIFLE(RM25) "<<endl;
-                        cout<<" 8. MACHINE GUN - M249(RM30)"<<endl; 
-                        
-                        cout<<" Here For Heavy & Cheep : "<<endl<<endl;
-				   	  	cout<< "Shotguns: 1. LEONE 12 GAUGE SUPER"<<endl<<endl;
-	                    cout<< "RIFLES   2. IDF DEFENDER \n 3. CV-47 \n 4. KRIEG 552 \n 5. MAGNUM SNIPER RIFLE \n 6.D3/AU-1"<<endl;
-                        
-                       
-				   	    cout<<" Here For Lightweight & Expansive : "<<endl<<endl;
-                        cout<<" PISTOL: 1. DESERT EAGLE \n 2. 40 DUAL ELITES "<<endl;       
-                        cout<<" SMG : 3.KM UMP45 \n 4. ES C90 "<<endl;
-                        
-                       	
-						cout<<" Here For LightWeight & cheep : "<<endl<<endl;
-				   	  	cout<< "Pistol: 1. 9x19MM SIDEARM \n 2. KM .45 TACTICAL \n 3. 228 COMPACT "<<endl<<endl;
-	                    cout<< "SMG :  4. INGRAM MAC-10 \n 5.KM SUB-MACHINE GUN "<<endl;
-                        
-                        
-	
-	
-	
-	
-	
-	
-	
-	
-	
-}
-
-void buatapa_4 ()
-{
-                   int c_gun,q_gun;
+	int c_gun,q_gun;
 				   
 				    cout<< "Here The List Of EQUIPMENT  That We recommend"<<endl;
 			   	    system ("pause");
 			   	    system ("CLS");	
 			   	    
-			   	    cout<<" 1. KEVLAR \n2.KEVLAR + HELMET \n3.FLASHBANG \n4.HE GRENADE \n5.SMOKE GRENADE \n6.DEFUSAL KIT \n7.NIGHTVISION \n8.TACTICAL SHIELD "<<endl;
+			   	    cout<<"1.KEVLAR(RM650) \n\n2.KEVLAR + HELMET(RM1000) \n\n3.FLASHBANG(RM200) \n\n4.HE GRENADE(RM300) \n\n5.SMOKE GRENADE(RM300) \n\n6.DEFUSAL KIT(RM200) \n\n7.NIGHTVISION \n\n8.TACTICAL SHIELD(RM2200) "<<endl;
 			   	    
-			   	    cout<< "Choose What Gun Do You Want : "<<endl;
+			   	    cout<< "\nChoose What Gun Do You Want : "<<endl;
 					cin>> c_gun;
 						
 					cout<< "How Many Do You Want It ? "<<endl<<endl;
@@ -575,131 +830,95 @@ void buatapa_4 ()
 					
 					    if (c_gun == 1)
 					    {
-					    	c_gun = 10;
+					    	c_gun = 650;
 					      calculate(c_gun,q_gun);
 						}
 						
 						else if (c_gun == 2)
 						{
-							c_gun = 10;
+							c_gun = 1000;
 					      calculate(c_gun,q_gun);
 						}
 					    
 						else if (c_gun == 3)
 					    {
-					      c_gun = 10;
+					      c_gun = 200;
 					      calculate(c_gun,q_gun);
 						  
 						}
 						
 						else if (c_gun == 4)
 						{
-							c_gun = 10;
+							c_gun = 300;
 						    calculate(c_gun,q_gun);
 						}
 						          
 		   		   	    else if (c_gun == 5)
 						{
-							c_gun = 12;
+							c_gun = 300;
 						  	calculate(c_gun,q_gun);
 						}
 		   		   	    
 				   	  	else if (c_gun == 6)
 						{
-							c_gun = 15;
+							c_gun = 200;
 						  	calculate(c_gun,q_gun);
 						}
 						
 						else if (c_gun == 7)
 						{
-							c_gun = 16;
+							c_gun = 1250;
 						  	calculate(c_gun,q_gun);	
 						}
 						
 						else if (c_gun == 8)
 						{
-							c_gun = 20;
+							c_gun = 2200;
 						  	calculate(c_gun,q_gun);	
-						}
-	
+	                   
+                    	}
+                        
 }
 
-void buatapa_5 ()
+void buatapa_4 ()
 {
+                  
+	buatapa_1();					
 	
 }
 
-void buatapa_6 ()
-{
-	
-}
-
-void calculate(int& x,int& y)
-{
-	int price,money_in,balance;
-						price =x*y;	
-	 				    cout<<"Total Price : "<<price<<endl<<endl;
-	 				     
-	 				    cout<<"Please Enter Your Money :RM ";
-					    cin>> money_in;
-												 
-						balance = money_in - price;
-						 
-						 if (money_in>=price)
-						 {
-						 	cout<< "Your Balance : "<<balance<<endl<<endl;
-					      	cout<< "Thank You Please Come Again !!!"<<endl;
-							  	
-						 }
-						 while(money_in<price)
-	 				     {
-	 				     	cout<<"Try again"<<endl;
-	 				     	
-						 	cout<<"Please Enter Your Money :RM ";
-					      cin>> money_in;
-												 
-						  balance = money_in - price;
-						 
-						 if (money_in>=price)
-						 {
-						 	cout<< "Your Balance :RM "<<balance<<endl<<endl;
-					      	cout<< "Thank You Please Come Again !!!"<<endl;
-							  	
-						 }
-						}	
-}
-			
-
-
-	
+};	
 int main ()
 {
+	wtpe a1,a2,a3,a4,a5,a6;
 	int bahasa,lesen,option,helping,TODO,gunweight,pricetag,q_gun,c_gun,price,money_in,balance;
-
 	string name;
+	Beep(2020,1100);                                                             // causes the computer to beep
+    char l=219; 
+	
 	cout<<"Enter your name: ";
 	getline(cin,name);    
 	
+	cout<<"Please wait while system is analyzing the data\n";
+    for ( int i=0; i<10 ; i++)
+    {
+        Beep(2000,500);
+        cout<<l; 
+    } 
+	
 	system("pause");
 	system("cls");
-	cout<< "Welcome "<<name<< " To Our Gun Shop. Please Select Your Langauge / Selamat Datang " <<name<< " Ke kedai Senjata Kami.\nSila Pilih bahasa Anda"<<endl<<endl;
-			
-	cout<< "\t 1. English "<<endl ;                               // Pilih Bahasa first step
-	cout<< "\t 2. Bahasa Melayu "<<endl<<endl;
-	cin >> bahasa;
-	
-		
-	if (bahasa == 1)
-	{
+	cout<< "\t\t\tWelcome "<<name<< " To Our Gun Shop."<<endl<<endl;
+	cout<<"\t\t\t\tby BeeFiz"<<endl;
+	cout<< "\t\t======================================================"<<endl<<endl<<endl;	
 
-		cout<<" "<<name<<", Do You Have Gun License ? "<<endl;
+		cout<<name<<", Do You Have Gun License ? "<<endl;
 		
 		cout<< "\t 1. Yes "<<endl ;                               // Tanya Pasai Lesen Ada ke x?
 	    cout<< "\t 2. No "<<endl<<endl;
 		cin>> lesen;
 		
 		if (lesen == 1)
-		
 		{
 			cout<<"Good ! Welcome Once again !"<<endl ;
 			
@@ -707,57 +926,39 @@ int main ()
 			
 			system ("CLS");                                      //Benda yg clear screen 
 			
-			cout<< "\t 1. First Time ? Need Help ? \t\t 2. Buy Guns \t\t 3. Price List Of Guns "<<endl<<endl;                    // Kat perlu Ada while Loop kalau user letak error
-			cout<< "\t\t\t\t 4.EQUIPMENT  \t\t 5.Need Support ? "<<endl;
+			cout<< "\t 1. First Time ? Need Help ? \t\t 2. Buy Guns \t\t 3. EQUIPMENT "<<endl<<endl;                    // Kat perlu Ada while Loop kalau user letak error
+			cout<< "\t\t\t\t 4.Need Support ?  \t\t  "<<endl;
 			cin>> option;
 			
 			if (option == 1)
 			
 			{
-				buatapa_1();   
+				a1.buatapa_1();   
 			   
 			}
 		
 			else if (option == 2)
 			
-			{
-				buatapa_2();
+	//		{
+				a2.buatapa_2();
 			}
 			
 			else if (option == 3)
 			
 			{
-				buatapa_3();
+				a3.buatapa_3();
 			}
 			
 			else if (option == 4)
-			
 			{
-				buatapa_4();
+				a4.buatapa_4();
 			}
 			
-			else if (option == 5)
-			
-			{
-				cout<< "5"	;
-			}
-						
-		}
-		
 		else
 		{
 			cout<< "Get Lost We Are NOT Selling You to Guys!";
 		}
 		
     }
-			
-	else if (bahasa == 2)
-	
-	{
-		cout<<" "<<name<<", Do You Have Gun License ? "<<endl;
-		
-		cout<< "saya melayu";
-	}
-	
-   
 }
+// Hi Sir...
